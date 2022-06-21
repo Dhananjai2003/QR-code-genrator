@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QR-code amFOSS</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <form>
+            <div id="form">
+                <h1>Contact Details</h1>
+                <input type="text" class="text_input" id="name_tag" placeholder="Name" style="margin-top: 10px;">
+                <input type="text" class="text_input" id="email_tag" placeholder="Email Address"><br>
+                <input type="text" class="text_input" id="twitter_tag" placeholder="Twitter"><br>
+                <input type="text" class="text_input" id="github_tag" placeholder="GitHub User Name"><br>
+                <button class="Button_input" id="create_button" style="margin-top: 10px;" onclick="output()">CREATE</button>
+                <button class="Button_input" id="clear_button" style="margin-bottom: 30px;" onclick="clear_text_box()">CLEAR</button>
+            </div>
+        </form>
+
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>ID Card</h2>
+                    <button id="closeBtn">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <span><img src="backround.png"></span>
+                    <span>
+                        <h5 id="name_display">NAME :</h5>
+                        <h5 id="email_display">EMAIL ID :</h5>
+                        <h5 id="twitter_display">TWITTER ID :</h5>
+                        <h5 id="github_display">GITHUB :</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>ID Card</h2>
+                    <button id="closeBtn">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <span><div class="placeholder"><img src="download.png" height="70%"></div></span>
+                    <span class="display">
+                        <h5 id="name_display">NAME :<br> Dhananjai Murali</h5>
+                        <h5 id="email_display">EMAIL ID :<br> dhananjaimurali30@gmail.com</h5>
+                        <h5 id="twitter_display">TWITTER ID :<br> @dhananajai2003</h5>
+                        <h5 id="github_display">GITHUB :<br> Dhananjai2003</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="index.js"></script>
+    </body>
+</html>
