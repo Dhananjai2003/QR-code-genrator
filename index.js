@@ -67,30 +67,40 @@ function name_check()
     return true
 }
 
-function output()
-{
-    //code to show the pop up div    
-    document.getElementById("create_button").addEventListener("click", function () {
-        document.querySelector(".overlay").style.display="flex"
-    })
-    
-    document.querySelector('#closeBtn').addEventListener("click",function(){
-        document.querySelector(".overlay").style.display="none"
-    })
-}
+// function output()
+// {
+//     //code to show the pop up div    
+//     document.querySelector(".overlay").style.display="flex"   
+// }
 
-function input_validity()
+document.querySelector('#closeBtn').addEventListener("click",function(){
+    document.querySelector(".overlay").style.display="none"
+})
+
+// /function input_validity()
+// {
+//     if (name_check() && twitter_check() && email_check())
+//     {
+//         output()
+//     }
+//     else    
+//     {
+//         // alert("Invalid input(s)")
+//     }
+// }
+
+create_button.addEventListener("click",function()
 {
     if (name_check() && twitter_check() && email_check())
     {
-        output()
+        document.getElementById("overlay").style.display='flex'
     }
     else    
     {
         // alert("Invalid input(s)")
+        return
     }
-}
-
+})
 
 function clear_text_box()
 {

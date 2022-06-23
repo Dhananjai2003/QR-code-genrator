@@ -94,11 +94,15 @@ h6
     height: 100%;
     position:absolute;
     top: 0;
-    display: none;
     background-color: rgba(0,0, 0, 0.5);
+    display: none;
     z-index: 10px;
     justify-content: center;
     align-items: center;
+}
+
+.active{
+    display: flex;
 }
 
 .modal
