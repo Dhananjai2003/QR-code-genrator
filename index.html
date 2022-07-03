@@ -20,11 +20,20 @@
         <div class="overlay" id="overlay">
             <div class="modal">
                 <div class="modal-header">
-                    <h2>ID Card</h2>
+                    <h2>QR Code</h2>
                     <button id="closeBtn">&times;</button>
                 </div>
                 <div class="modal-content">
-                    <span><img src="backround.png" height="100px"></span>
+                    <div id="placeHolder"></div>
+                    <script>
+                        var typeNumber = 4;
+                        var errorCorrectionLevel = 'L';
+                        var qr = qrcode(typeNumber, errorCorrectionLevel);
+                        qr.addData('Hi!');
+                        qr.make();
+                        document.getElementById('placeHolder').innerHTML = qr.createImgTag();
+                    </script>
+                    <!-- <span><img src="backround.png" height="100px"></span> -->
                     <span>
                         <h5 id="name_display">NAME :</h5>
                         <h5 id="email_display">EMAIL ID :</h5>
@@ -37,5 +46,6 @@
 
 
         <script src="index.js"></script>
+        <script type="text/javascript" src="qrcode.js"></script>
     </body>
 </html>

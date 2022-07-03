@@ -100,6 +100,10 @@ create_button.addEventListener("click",function(e)
         {
             if (email_check())
             {
+                document.getElementById("name_display").textContent+=name_text_box.value
+                document.getElementById("email_display").textContent+=email_text_box.value
+                document.getElementById("twitter_display").textContent+=twitter_text_box.value
+                document.getElementById("github_display").textContent+=github_text_box.value
                 document.getElementById("overlay").style.display='flex'
             }
         }
@@ -118,5 +122,9 @@ function clear_text_box(e)
     name_text_box.value=''
     email_text_box.value=''
     github_text_box.value=''
+    document.getElementById("name_display").textContent='NAME : '
+    document.getElementById("email_display").textContent='EMAIL ID : '
+    document.getElementById("twitter_display").textContent='TWITTER ID : '
+    document.getElementById("github_display").textContent='GITHUB : '
 }
 
