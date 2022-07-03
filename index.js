@@ -45,7 +45,7 @@ function email_check()
 function twitter_check()
 {
     let s=twitter_text_box.value
-    if (length(s)>0)
+    if (s.lenght>0)
     {
         if (s[0]!='@')
         {
@@ -70,6 +70,7 @@ function name_check()
 // function output()
 // {
 //     //code to show the pop up div    
+//     preventDefault()
 //     document.querySelector(".overlay").style.display="flex"   
 // }
 
@@ -77,8 +78,9 @@ document.querySelector('#closeBtn').addEventListener("click",function(){
     document.querySelector(".overlay").style.display="none"
 })
 
-// /function input_validity()
+// function input_validity(e)
 // {
+//     e.preventDefault()
 //     if (name_check() && twitter_check() && email_check())
 //     {
 //         output()
@@ -89,21 +91,29 @@ document.querySelector('#closeBtn').addEventListener("click",function(){
 //     }
 // }
 
-create_button.addEventListener("click",function()
+create_button.addEventListener("click",function(e)
 {
-    if (name_check() && twitter_check() && email_check())
+    e.preventDefault()
+    if (name_check())
     {
-        document.getElementById("overlay").style.display='flex'
+        if (twitter_check())
+        {
+            if (email_check())
+            {
+                document.getElementById("overlay").style.display='flex'
+            }
+        }
     }
     else    
     {
-        // alert("Invalid input(s)")
+        alert("Invalid input(s)")
         return
     }
 })
 
-function clear_text_box()
+function clear_text_box(e)
 {
+    e.preventDefault()
     twitter_text_box.value=''
     name_text_box.value=''
     email_text_box.value=''
