@@ -34,4 +34,4 @@ You can use this as stand alone web-site or use it as an extension in google chr
 textboxes and press create button which will generate the QR-code.
 
 ## Credits
-Dhananjai Murali - HTML, CSS, JavaScript, node-packages integration.
++ Dhananjai Murali - HTML, CSS, JavaScript, node-packages integration.
