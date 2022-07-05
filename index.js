@@ -108,9 +108,9 @@ create_button.addEventListener("click",function(e)
                 var typeNumber = 4;
                 var errorCorrectionLevel = 'L';
                 var qr = qrcode(typeNumber, errorCorrectionLevel);
-                qr.addData('Hi!');
+                var message='Name:'+name_text_box.value+"\nEmail:"+email_text_box.value+"\nTwitter:"+twitter_text_box.value+"\nGitHub:"+github_text_box.value
+                qr.addData(message);
                 qr.make();
-                console.log(qr.make())
                 document.getElementById('placeHolder').innerHTML = qr.createImgTag();
             }
         }
