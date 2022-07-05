@@ -25,20 +25,16 @@
                 </div>
                 <div class="modal-content">
                     <div id="placeHolder"></div>
-                    <script>
-                        var typeNumber = 4;
-                        var errorCorrectionLevel = 'L';
-                        var qr = qrcode(typeNumber, errorCorrectionLevel);
-                        qr.addData('Hi!');
-                        qr.make();
-                        document.getElementById('placeHolder').innerHTML = qr.createImgTag();
-                    </script>
                     <!-- <span><img src="backround.png" height="100px"></span> -->
                     <span>
-                        <h5 id="name_display">NAME :</h5>
-                        <h5 id="email_display">EMAIL ID :</h5>
-                        <h5 id="twitter_display">TWITTER ID :</h5>
-                        <h5 id="github_display">GITHUB :</h5>
+                        <h5 id="name_show" style="margin-bottom: 0px;">Name: </h5>
+                        <h5 id="name_display" style="margin-top: 0px;"></h5>
+                        <h5 id="email_show" style="margin-bottom: 0px;">Email Id:</h5>
+                        <h5 id="email_display" style="margin-top: 0px;"></h5>
+                        <h5 id="twitter_show" style="margin-bottom: 0px;">Twitter</h5>
+                        <h5 id="twitter_display" style="margin-top: 0px;"></h5>
+                        <h5 id="github_show" style="margin-bottom: 0px;">GitHub:</h5>
+                        <h5 id="github_display" style="margin-top: 0px;"></h5>
                     </span>
                 </div>
             </div>
@@ -46,6 +42,6 @@
 
 
         <script src="index.js"></script>
-        <script type="text/javascript" src="qrcode.js"></script>
+        <script type="text/javascript" src="node_modules\qrcode-generator\qrcode.js"></script>
     </body>
 </html>

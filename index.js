@@ -75,7 +75,7 @@ function name_check()
 // }
 
 document.querySelector('#closeBtn').addEventListener("click",function(){
-    document.querySelector(".overlay").style.display="none"
+    document.getElementById("overlay").style.display='none'
 })
 
 // function input_validity(e)
@@ -100,18 +100,20 @@ create_button.addEventListener("click",function(e)
         {
             if (email_check())
             {
-                document.getElementById("name_display").textContent+=name_text_box.value
-                document.getElementById("email_display").textContent+=email_text_box.value
-                document.getElementById("twitter_display").textContent+=twitter_text_box.value
-                document.getElementById("github_display").textContent+=github_text_box.value
+                document.getElementById("name_display").textContent=name_text_box.value
+                document.getElementById("email_display").textContent=email_text_box.value
+                document.getElementById("twitter_display").textContent=twitter_text_box.value
+                document.getElementById("github_display").textContent=github_text_box.value
                 document.getElementById("overlay").style.display='flex'
+                var typeNumber = 4;
+                var errorCorrectionLevel = 'L';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData('Hi!');
+                qr.make();
+                console.log(qr.make())
+                document.getElementById('placeHolder').innerHTML = qr.createImgTag();
             }
         }
-    }
-    else    
-    {
-        alert("Invalid input(s)")
-        return
     }
 })
 
