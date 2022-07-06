@@ -25,7 +25,7 @@ link for documentation - https://www.npmjs.com/package/qrcode-generator
 + Now use the extension.
 
 ### To install qr-code-generator
-+ Type the code ``` npm install npm i qrcode-generator``` in your node terminal from the directory that you want
++ Type the code ```npm i qrcode-generator``` in your node terminal from the directory that you want
 + Or you can just clone this repo into the desired directory and the packages will be imported by default 
 to clone just type ```git clone https://github.com/Dhananjai2003/QR-code-genrator.git``` your terminal.
 
