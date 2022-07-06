@@ -170,5 +170,8 @@ function clear_text_box(e)
     document.getElementById("email_display").textContent='EMAIL ID : '
     document.getElementById("twitter_display").textContent='TWITTER ID : '
     document.getElementById("github_display").textContent='GITHUB : '
+    email_text_box.style.borderBlockColor='grey'
+    twitter_text_box.style.borderBlockColor='grey'
+    name_text_box.style.borderBlockColor='grey'
 }
 

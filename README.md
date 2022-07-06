@@ -31,7 +31,7 @@ to clone just type ```git clone https://github.com/Dhananjai2003/QR-code-genrato
 
 ## How to use
 You can use this as stand alone web-site or use it as an extension in google chrome. You have just input the name, email id, etc. in the given 
-textboxes and press create button which will generate the QR-code.
+textboxes and press create button which will generate the QR-code. It will change the text-box border color to red if you have sumited with the wrong format.
 
 ## Credits
 + Dhananjai Murali - HTML, CSS, JavaScript, node-packages integration.
