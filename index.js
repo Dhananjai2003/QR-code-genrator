@@ -45,12 +45,11 @@ function email_check()
 function twitter_check()
 {
     let s=twitter_text_box.value
-    if (s.lenght>0)
+    if (s!='')
     {
         if (s[0]!='@')
         {
-            s='@'+s
-            return true
+            return false
         }
     }
     return true
@@ -78,18 +77,6 @@ document.querySelector('#closeBtn').addEventListener("click",function(){
     document.getElementById("overlay").style.display='none'
 })
 
-// function input_validity(e)
-// {
-//     e.preventDefault()
-//     if (name_check() && twitter_check() && email_check())
-//     {
-//         output()
-//     }
-//     else    
-//     {
-//         // alert("Invalid input(s)")
-//     }
-// }
 
 create_button.addEventListener("click",function(e)
 {
@@ -112,9 +99,9 @@ create_button.addEventListener("click",function(e)
                 qr.addData(message);
                 qr.make();
                 document.getElementById('placeHolder').innerHTML = qr.createImgTag();
-                email_text_box.style.borderBlockColor='black'
-                twitter_text_box.style.borderBlockColor='black'
-                name_text_box.style.borderBlockColor='black'
+                email_text_box.style.borderBlockColor='grey'
+                twitter_text_box.style.borderBlockColor='grey'
+                name_text_box.style.borderBlockColor='grey'
             }
             else
             {
@@ -124,11 +111,51 @@ create_button.addEventListener("click",function(e)
         else
         {
             twitter_text_box.style.borderBlockColor='red'
+
+            if (email_check())
+            {
+                email_text_box.style.borderBlockColor='grey'
+            }
+
+            else
+            {
+                email_text_box.style.borderBlockColor='red'
+            }
         }
     }
     else
     {
         name_text_box.style.borderBlockColor='red'
+
+        if (twitter_check())
+        {
+            twitter_text_box.style.borderBlockColor='grey'
+
+            if (email_check())
+            {
+                email_text_box.style.borderBlockColor='grey'
+            }
+
+            else
+            {
+                email_text_box.style.borderBlockColor='red'
+            }
+        }
+
+        else
+        {
+            twitter_text_box.style.borderBlockColor='red'
+
+            if (email_check())
+            {
+                email_text_box.style.borderBlockColor='grey'
+            }
+
+            else
+            {
+                email_text_box.style.borderBlockColor='red'
+            }
+        }
     }
 })
 
