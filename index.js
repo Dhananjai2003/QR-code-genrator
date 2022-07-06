@@ -112,8 +112,23 @@ create_button.addEventListener("click",function(e)
                 qr.addData(message);
                 qr.make();
                 document.getElementById('placeHolder').innerHTML = qr.createImgTag();
+                email_text_box.style.borderBlockColor='black'
+                twitter_text_box.style.borderBlockColor='black'
+                name_text_box.style.borderBlockColor='black'
+            }
+            else
+            {
+                email_text_box.style.borderBlockColor='red'
             }
         }
+        else
+        {
+            twitter_text_box.style.borderBlockColor='red'
+        }
+    }
+    else
+    {
+        name_text_box.style.borderBlockColor='red'
     }
 })
 
