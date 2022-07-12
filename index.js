@@ -91,12 +91,12 @@ create_button.addEventListener("click",function(e)
                 email_value=email_text_box.value
                 twitter_value=twitter_text_box.value
                 github_value=github_text_box.value
-                document.getElementById("name_display").textContent=name_text_box.value
-                document.getElementById("email_display").textContent=email_text_box.value
-                document.getElementById("twitter_display").textContent=twitter_text_box.value
-                document.getElementById("github_display").textContent=github_text_box.value
+                document.getElementById("name_display").textContent=name_value
+                document.getElementById("email_display").textContent=email_value
+                document.getElementById("twitter_display").textContent=twitter_value
+                document.getElementById("github_display").textContent=github_value
                 document.getElementById("overlay").style.display='flex'
-                var typeNumber = 10;// 4
+                var typeNumber = 10;// from 4 to 10
                 var errorCorrectionLevel = 'L';
                 var qr = qrcode(typeNumber, errorCorrectionLevel);
                 var message='Name:'+name_value+"\nEmail:"+email_value+"\nTwitter:"+twitter_value+"\nGitHub:"+github_value
