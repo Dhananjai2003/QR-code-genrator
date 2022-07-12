@@ -96,7 +96,7 @@ create_button.addEventListener("click",function(e)
                 document.getElementById("twitter_display").textContent=twitter_text_box.value
                 document.getElementById("github_display").textContent=github_text_box.value
                 document.getElementById("overlay").style.display='flex'
-                var typeNumber = 6;// 4
+                var typeNumber = 10;// 4
                 var errorCorrectionLevel = 'L';
                 var qr = qrcode(typeNumber, errorCorrectionLevel);
                 var message='Name:'+name_value+"\nEmail:"+email_value+"\nTwitter:"+twitter_value+"\nGitHub:"+github_value
