@@ -87,15 +87,19 @@ create_button.addEventListener("click",function(e)
         {
             if (email_check())
             {
+                name_value=name_text_box.value
+                email_value=email_text_box.value
+                twitter_value=twitter_text_box.value
+                github_value=github_text_box.value
                 document.getElementById("name_display").textContent=name_text_box.value
                 document.getElementById("email_display").textContent=email_text_box.value
                 document.getElementById("twitter_display").textContent=twitter_text_box.value
                 document.getElementById("github_display").textContent=github_text_box.value
                 document.getElementById("overlay").style.display='flex'
-                var typeNumber = 4;
+                var typeNumber = 6;// 4
                 var errorCorrectionLevel = 'L';
                 var qr = qrcode(typeNumber, errorCorrectionLevel);
-                var message='Name:'+name_text_box.value+"\nEmail:"+email_text_box.value+"\nTwitter:"+twitter_text_box.value+"\nGitHub:"+github_text_box.value
+                var message='Name:'+name_value+"\nEmail:"+email_value+"\nTwitter:"+twitter_value+"\nGitHub:"+github_value
                 qr.addData(message);
                 qr.make();
                 document.getElementById('placeHolder').innerHTML = qr.createImgTag();
