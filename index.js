@@ -83,8 +83,10 @@ create_button.addEventListener("click",function(e)
     e.preventDefault()
     if (name_check())
     {
+        name_text_box.style.borderBlockColor='grey'
         if (twitter_check())
         {
+            twitter_text_box.style.borderBlockColor='grey'
             if (email_check())
             {
                 name_value=name_text_box.value
@@ -104,8 +106,6 @@ create_button.addEventListener("click",function(e)
                 qr.make();
                 document.getElementById('placeHolder').innerHTML = qr.createImgTag();
                 email_text_box.style.borderBlockColor='grey'
-                twitter_text_box.style.borderBlockColor='grey'
-                name_text_box.style.borderBlockColor='grey'
             }
             else
             {
