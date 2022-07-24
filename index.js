@@ -10,6 +10,100 @@ let error_message=true;
 //let output_table=document.querySelector(".hide")
 //document.getElementById("output_table").style.display="none"
 
+name_text_box.addEventListener("blur",function(){
+    let s=name_text_box.value
+    if (s=="" || s==" ")
+    {
+        //alert("Invalid Name")
+        name_text_box.style.borderBlockColor='red'
+        return false
+    }
+    name_text_box.style.borderBlockColor='grey'
+    return true
+})
+
+email_text_box.addEventListener('keyup',function(){
+    let s=email_text_box.value
+    let check_var=0
+    let check_var_domain=0
+    for (let i=0;i<s.length;i++)
+    {
+        if (s[i]=='@')
+        {
+            check_var+=1
+        }
+        else if (s[i]=='.')
+        {
+            check_var_domain+=1
+        }
+    }
+    if (check_var==1)
+    {
+        if (check_var_domain!=1)
+        {
+            //alert("Invalid Email")
+            email_text_box.style.borderBlockColor='red'
+            return false
+        }
+    }
+    else
+    {
+        // alert("Invalid Email")
+        email_text_box.style.borderBlockColor='red'
+        return false
+    }
+    email_text_box.style.borderBlockColor='grey'
+    return true
+})
+
+email_text_box.addEventListener('blur',function(){
+    let s=email_text_box.value
+    let check_var=0
+    let check_var_domain=0
+    for (let i=0;i<s.length;i++)
+    {
+        if (s[i]=='@')
+        {
+            check_var+=1
+        }
+        else if (s[i]=='.')
+        {
+            check_var_domain+=1
+        }
+    }
+    if (check_var==1)
+    {
+        if (check_var_domain!=1)
+        {
+            //alert("Invalid Email")
+            email_text_box.style.borderBlockColor='red'
+            return false
+        }
+    }
+    else
+    {
+        // alert("Invalid Email")
+        email_text_box.style.borderBlockColor='red'
+        return false
+    }
+    email_text_box.style.borderBlockColor='grey'
+    return true
+})
+
+twitter_text_box.addEventListener("keyup",function(){
+        let s=twitter_text_box.value
+        if (s!='')
+        {
+            if (s[0]!='@')
+            {
+                twitter_text_box.style.borderBlockColor='red'
+                return false
+            }
+        }
+        twitter_text_box.style.borderBlockColor='grey'
+        return true
+})
+
 function email_check()
 {
     let s=email_text_box.value
