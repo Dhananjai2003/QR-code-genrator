@@ -1,4 +1,4 @@
-# QR-code-genrator-web-extension
+# QR-Code-Generator-Chrome-Extension
 
 ## Description
 
@@ -19,8 +19,8 @@ link for documentation - https://www.npmjs.com/package/qrcode-generator
 
 + Frist you need to import/install the following npm package
 + Then go to chrome://extensions/.
-+ Then sweitch to developer mode. 
-+ click on load default and select the directory where you have cloned/installed this extensions.
++ Then switch to developer mode. 
++ click on load default and select the directory where you have cloned/installed these extensions.
 + Select the extension icon in chrome and click the "QR-Code Generator extension". 
 + Now use the extension.
 
@@ -30,8 +30,8 @@ link for documentation - https://www.npmjs.com/package/qrcode-generator
 to clone just type ```git clone https://github.com/Dhananjai2003/QR-code-genrator.git``` your terminal.
 
 ## How to use
-You can use this as stand alone web-site or use it as an extension in google chrome. You have just input the name, email id, etc. in the given 
-textboxes and press create button which will generate the QR-code. It will change the text-box border color to red if you have sumited with the wrong format.
+You can use this as standalone web-site or use it as an extension in google chrome. You have just input the name, email id, etc. in the given 
+textboxes and press create button which will generate the QR-code. It will change the text-box border colour to red if you have submitted with the wrong format.
 
 ## Credits
 + Dhananjai Murali - HTML, CSS, JavaScript, node-packages integration.
